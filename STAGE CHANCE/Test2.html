@@ -3,8 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>테이블 연습</title>
+    <style>
+        /*여러 태그를 지정할 때는 , 로 연결 */
+        table, th, tr, td {
+            border: 0.1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        td{
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: yellow;
+        }
+        tr:nth-child(odd){
+            background-color:orange;
+        }      
+        /* table{
+            border: 1px solid black;
+            
+        }
+        tr, td{ 
+            border: 1px solid red;
+        } */
+
+    </style>
 </head>
 <body>
-    
+    <!-- 테이블 태그 -->
+    <!-- border는 선을 그어주는 역활, 숫자는 선의 굵기 -->
+    <table border="1">
+        <tr> <!-- 새로운 행(가로줄) 추가-->
+            <!-- 새로운 열(세로) 추가 -->
+            <td>1</td>
+            <td>2</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <!-- 목차는 강조로 th를 쓴다. -->
+        <!-- 표제목 -->
+        <caption>학생제목</caption>
+        <tr>
+            <th>이름</th>
+            <th>이메일주소</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td>학생1</td>
+            <td>aa@aa</td>
+            <td>010-1111-1111</td>
+        </tr>
+        <tr>
+            <td>학생2</td>
+            <td>bb@bb</td>
+            <td>010-2222-2222</td>
+        </tr>
+        <tr>
+            <td>학생3</td>
+            <td>cc@cc</td>
+            <td>010-3333-3333</td>
+        </tr>
+        <tr>
+            <!-- colspan 은 칸 수 , 숫자  -->
+            <td colspan="2">학생4</td>
+            <td rowspan="2">dd@dd</td>
+            <td>010-4444-4444</td>
+        </tr>
+        <tr>
+            <td colspan="2">학생5</td>
+            <td>010-5555-5555</td>
+
+        </tr>
+    </table>
 </body>
 </html>
